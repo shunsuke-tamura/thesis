@@ -1,40 +1,49 @@
-\documentclass{jsarticle}
-
+\documentclass[twocolumn,a4j]{jsarticle}
+%%
+%%
+%% 以下のスタイル情報は変更しない
+\setlength{\textheight}{277mm}
+\setlength{\textwidth}{180mm}
+\setlength{\topmargin}{-35mm}
+\setlength{\oddsidemargin}{-9mm}
 \usepackage{subfiles}
-\usepackage{listings}
-\usepackage{jlisting}
-\usepackage{color}
-\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{graphicx} % 画像を挿入したり，テキストや図の拡大縮小・回転を行うためのパッケージ
+\usepackage{secdot}
+\sectiondot{subsection}
 
-\title{ {\LaTeX} 自動ビルド・校正レビュー機能付きテンプレート}
-\author{pddg}
-\date{\today}
+%%
+%% 
+%% 論文タイトルを記入
+\title{
+  卒業論文または中間発表のタイトル
+}   
+
+%%
+%% 
+%% 氏名、学籍番号、指導教員を記入
+\author{
+  佐賀大学 理工学部 理工学科 情報ネットワーク工学コース\\
+  　発表者：安達　さくら (20238008)\\
+  指導教員：松前　進　教授
+}
+
+\date{\today} 
 
 \newcommand{\code}[1]{\texttt{#1}}
-\lstset{
-    frame=single,
-    numbers=left,
-    tabsize=4,
-    basicstyle=\ttfamily,
-    numberstyle=\scriptsize,
-    commentstyle={\small\ttfamily \color[gray]{.5}},
-}
 
 \begin{document}
 \maketitle
+\thispagestyle{empty} %ページ番号を消したい場合
 
 \subfile{sections/abstract}
+\subfile{sections/section2}
+\subfile{sections/section3}
+\subfile{sections/section2}
 
-\newpage
+\subfile{sections/biography}
 
-\subfile{sections/usage}
 
-\newpage
-
-\subfile{sections/sample}
-
-\newpage
-
-\subfile{sections/faq}
+% \newpage
 
 \end{document}
+
